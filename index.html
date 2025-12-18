@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Webstudio</title>
   </head>
-  <!-- HEADER -->
   <body>
     <header class="header">
       <div class="container header-container">
@@ -58,9 +57,7 @@
         </address>
       </div>
     </header>
-    <!-- MAIN -->
     <main>
-      <!-- HERO -->
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-caption">
@@ -70,7 +67,6 @@
           <button class="btn" type="button">Order Service</button>
         </div>
       </section>
-      <!-- FEATURES -->
       <section class="features">
         <div class="container">
           <h2 class="visually-hidden">Our Values</h2>
@@ -126,7 +122,6 @@
           </ul>
         </div>
       </section>
-      <!-- TEAM -->
       <section class="team">
         <div class="container">
           <h2 class="section-caption">Our Team</h2>
@@ -306,7 +301,6 @@
           </ul>
         </div>
       </section>
-      <!-- PORTFOLIO -->
       <section class="portfolio">
         <div class="container">
           <h2 class="section-caption">Our Portfolio</h2>
@@ -318,7 +312,7 @@
                   src="./images/banking-app.jpg"
                   width="360"
                   height="300"
-                  alt="banking app "
+                  alt="banking app image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -338,7 +332,7 @@
                   src="./images/cashless-payment.jpg"
                   width="360"
                   height="300"
-                  alt="cashless payment "
+                  alt="cashless payment image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -358,7 +352,7 @@
                   src="./images/meditation-app.jpg"
                   width="360"
                   height="300"
-                  alt="meditation app"
+                  alt="meditation app image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -378,7 +372,7 @@
                   src="./images/taxi-service.jpg"
                   width="360"
                   height="300"
-                  alt="taxi service"
+                  alt="taxi service image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -398,7 +392,7 @@
                   src="./images/screen-illustrations.jpg"
                   width="360"
                   height="300"
-                  alt="screen illustrations "
+                  alt="screen illustrations image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -418,7 +412,7 @@
                   src="./images/online-courses.jpg"
                   width="360"
                   height="300"
-                  alt="online courses "
+                  alt="online courses image"
                 />
                 <p class="layout">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -435,7 +429,6 @@
         </div>
       </section>
     </main>
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-wrapper">
@@ -481,118 +474,121 @@
           </ul>
         </div>
         <div class="footer-subscribe">
-          <p class="footer-text">Subscibe</p>
+          <p class="subscribe-caption">Subscribe</p>
           <form class="subscribe-form">
-            <label class="subscribe-label">
+            <label class="subscribe-form-label">
               <input
                 type="email"
-                name="email"
                 class="subscribe-input"
                 placeholder="E-mail"
-                required
+                name="subscibe-input"
               />
             </label>
-            <button type="submit" class="subscribe-btn">
+            <button class="btn subscribe-btn" type="submit">
               Subscribe
-              <svg class="subscribe-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-plane"></use>
+              <svg class="subscibe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
-    <!-- BACKDROP -->
     <div class="backdrop is-open">
-      <div class="modal-wrapper">
-        <button type="button" class="modal-close" data-modal-close>
-          <svg class="close-icon" width="8" height="8">
-            <use href="./images/icons.svg#icon-close-black-1"></use>
+      <div class="modal">
+        <button class="modal-btn" type="button">
+          <svg class="modal-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <p class="modal-title">Leave your contacts and we will call you back</p>
-        <form class="modal-form">
-          <!-- NAME -->
-          <div class="form-field">
-            <label class="form-label" for="user-name">Name</label>
-            <div class="input-wrapper">
+        <p class="modal-caption">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form" name="reviewForm">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-name">Name</label>
+            <div class="modal-form-wrapper">
               <input
                 type="text"
-                name="user-name"
-                id="user-name"
-                class="form-input"
+                class="modal-form-input"
                 placeholder=" "
+                id="user-name"
+                name="user-name"
                 required
+                title="Username must be two word separeted by space"
+                minlength="3"
               />
-              <svg class="form-icon" width="18" heigth="24">
-                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
               </svg>
             </div>
           </div>
-          <!-- PHONE -->
-          <div class="form-field">
-            <label class="form-label" for="user-phone">Phone</label>
-            <div class="input-wrapper">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="phone">Phone</label>
+            <div class="modal-form-wrapper">
               <input
                 type="tel"
-                name="user-phone"
-                id="user-phone"
-                class="form-input"
+                class="modal-form-input"
                 placeholder=" "
+                id="phone"
+                name="phone"
                 required
+                title="Enter your phone ex.: +110001111111"
+                minlength="8"
               />
-              <svg class="form-icon" width="18" heigth="24">
-                <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
           </div>
-          <!-- EMAIL -->
-          <div class="form-field">
-            <label class="form-label" for="user-email">Email</label>
-            <div class="input-wrapper">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="email">Email</label>
+            <div class="modal-form-wrapper">
               <input
                 type="email"
-                name="user-email"
-                id="user-email"
-                class="form-input"
+                class="modal-form-input"
                 placeholder=" "
+                id="email"
+                name="email"
                 required
+                title="Enter your email ex.: email_adress@gmail.com"
+                minlength="10"
               />
-              <svg class="form-icon" width="18" heigth="24">
-                <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
           </div>
-          <!-- COMMENT -->
-          <div class="form-field">
-            <label class="form-label" for="user-comment">Comment</label>
+          <div class="modal-form-field textarea-margin">
+            <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
+              class="modal-form-comment"
               name="user-comment"
               id="user-comment"
-              class="form-textarea"
               placeholder="Text input"
             ></textarea>
           </div>
-          <!-- CHECKBOX -->
-          <div class="form-checkbox">
+          <div class="modal-form-agreement">
             <input
+              class="agreement-input visually-hidden"
               type="checkbox"
-              name="policy"
-              id="policy"
-              class="checkbox-input visually-hidden"
-              required
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
             />
-            <label for="policy" class="checkbox-label">
-              <span class="checkbox-custom">
-                <svg width="10" height="8">
-                  <use href="./images/icons.svg#icon-Click"></use>
+            <label class="modal-form-label modal-form-box" for="user-privacy">
+              <span class="custom-checkbox">
+                <svg class="custom-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the
-              <a href="#" class="policy-link">Privacy Policy</a>
+              <a class="modal-form-link" href="#" target="_blank">
+                Privacy Policy
+              </a>
             </label>
           </div>
-          <button type="submit" class="modal-btn">Send</button>
+          <button class="btn" type="submit" disabled>Send</button>
         </form>
       </div>
     </div>
